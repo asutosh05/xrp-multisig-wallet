@@ -15,3 +15,4 @@ def generateWallateAddress(request):
     return render(request,'index.html',result)
     
     
+    
