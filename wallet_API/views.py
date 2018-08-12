@@ -1,10 +1,16 @@
 from django.shortcuts import render
-from .pythonJsConnector import generateAddress
+import json
+import requests
 # Create your views here.
 
 def generateWallateAddress(request):
-    address=generateAddress()
-    result={"address":address}
+    server='http://127.0.0.1:5005'
+    reqjson={
+        "method": "wallet_propose",
+        "params": []
+    }
+    response =requests.post(server,json=reqjson)
+    result=json.loads(response.text)
     print(result)
     return render(request,'index.html',result)
     
