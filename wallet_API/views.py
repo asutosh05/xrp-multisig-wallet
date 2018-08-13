@@ -12,7 +12,8 @@ def generateWallateAddress(request):
     response =requests.post(server,json=reqjson)
     result=json.loads(response.text)
     print(result)
+    address={'address':result}
     return render(request,'index.html',result)
     
-    
+
     
