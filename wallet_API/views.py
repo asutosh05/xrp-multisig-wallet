@@ -13,9 +13,8 @@ def generateWallateAddress(request):
     result=json.loads(response.text)
     address={'address':result}
     walletForm=WalletForm(result)
-    if walletForm.is_valid():
-        walletForm.save()
-        print("saved")
+    walletForm.save()
+    print("saved")
     return render(request,'index.html',address)
     
 
