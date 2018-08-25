@@ -2,7 +2,7 @@ from django.shortcuts import render
 import json
 import requests
 from .forms import WalletForm
-from rest_framework.generics import LISTAPIView,CreateAPIView
+from rest_framework.generics import CreateAPIView
 from .serializers import WalletSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
