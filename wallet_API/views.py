@@ -16,7 +16,7 @@ def generateWallateAddress(request):
     }
     response =requests.post(ADMIN_SERVER,json=reqjson)
     result=json.loads(response.text)
-    serializer = WalletSerializer(result)
+    serializer = WalletSerializer(data=result)
     if serializer.is_valid():
         serializer.save()
         print("saved in db")
