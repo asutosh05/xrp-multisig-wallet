@@ -10,6 +10,5 @@ class WalletSerializer(serializers.ModelSerializer):
             'master_seed_hex',
             'public_key',
             'public_key_hex',
-            'url'
         )
     
