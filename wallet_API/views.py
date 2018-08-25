@@ -8,7 +8,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 # Create your views here.
 ADMIN_SERVER='http://127.0.0.1:5005'
-@api_view(["POST"])
+@api_view(["GET"])
 def generateWallateAddress(request):
     reqjson={
         "method": "wallet_propose",
